@@ -1,27 +1,38 @@
-package assignment;
+package tddPractice;
 
-import java.util.Scanner;
 public class Arithmetic {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter first integer: ");
-        int number1 = input.nextInt();
-        int square1 = number1 * number1;
-
-        System.out.println("Enter second integer: ");
-        int number2 = input.nextInt();
-        int square2 = number2 * number2;
-
-        System.out.printf("square of %d%n and %d%n is %d%n and %d%n respectively: ", number1, number2, square1, square2);
-
-        int sum = square1 + square2;
-        System.out.printf("sum of %d and %d is %d", square1, square2, sum );
-
-        int difference = square1 - square2;
-        System.out.printf("difference of %d and %d is %d", square1, square2,difference);
 
 
+    public double squaredNumberSum(int num1, int num2) {
+        double square1 = Math.pow(num1, 2);
+        double square2 = Math.pow(num2, 2);
+        return square1 + square2;
+    }
 
+    public int collectInputFromUser(int number, int number1) {
 
+        if (number <= 0 || number1 <= 0) {
+            System.out.println("Invalid input");
+        }
+        int input = number + number1;
+
+        return input;
+    }
+
+    public int getSquaredNumber1(int num1) {
+        return (int) Math.pow(num1, 2);
+    }
+
+    public int getSquaredNumber2(int num2) {
+        return (int) Math.pow(num2, 2);
+    }
+
+    public double squaredNumberDifference(int num1, int num2) {
+        double square1 = Math.pow(num1, 2);
+        double square2 = Math.pow(num2, 2);
+        return square1 - square2;
     }
 }
+
+
+
